@@ -13,10 +13,10 @@ class Song < ActiveRecord::Base
   end
 
   def note_contents=(contents)
-    self.notes = contents.map {|n| Note.new(:content => n) }
+    self.notes = contents.map { |n| Note.new(:content => n) }
   end
 
   def note_contents
-    self.notes 
+    self.notes.map { |n| n["content"] }
   end
 end
