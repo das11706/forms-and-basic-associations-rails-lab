@@ -9,8 +9,9 @@
   <br />
   <%= f.collection_select :genre_id, Genre.all, :id, :name %>
   <br />
-  
-
+  <%= f.label :notes %>
+  <%= f.text_field :note_contents %>
+  <br />
   <%= f.submit %>
 <% end %>
 
